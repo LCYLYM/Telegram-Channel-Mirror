@@ -1,0 +1,11 @@
+name = "telegram-channel-mirror"
+type = "javascript"
+account_id = "ed02115b0333e518a62d649ee291264b"
+workers_dev = true
+zone_id = ""
+
+[env.staging]
+name = "tg-staging"
+
+[env.production]
+name = "tg"

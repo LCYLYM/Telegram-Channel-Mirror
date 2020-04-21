@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "telegram-channel-mirror",
+  "version": "1.0.0",
+  "description": "A template for kick starting a Cloudflare Workers project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,css,json,md}'",
+    "dev": "wrangler preview --watch",
+    "publish": "wrangler publish --env production"
+  },
+  "author": "idealclover <idealclover@live.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
