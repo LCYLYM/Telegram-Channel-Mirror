@@ -32,23 +32,7 @@ async function replace_response_text(response) {
   // let re4 = new RegExp(k, 'g')
   // text = text.replace(re4, l);
   // replace icon
-  let re3 = new RegExp(
-    'data-content=\\\\".\\\\"><img src=\\\\".*?"><\\\\?/i>',
-    'g',
-  )
-  text = text.replace(
-    re3,
-    '<i class=\\"tgme_widget_message_user_photo bgcolor1\\" data-content=\\"i\\"><img src=\\"' +
-      icon_url +
-      '\\"></i>',
-  )
-  let re4 = new RegExp('data-content="."><img src=".*?"><\\/i>', 'g')
-  text = text.replace(
-    re4,
-    '<i class="tgme_widget_message_user_photo bgcolor1" data-content="i"><img src="' +
-      icon_url +
-      '"></i>',
-  )
+  text=text.replace(/<i class="(tgme_page_photo_image|tgme_widget_message_user_photo) bgcolor4" data-content="(.*?)"><img src=".*?"/g,function(r,r2,r3){return '<i class="'+r2+' bgcolor4" data-content="'+r3+'"><img src="'+icon_url+'"';})
   return text
 }
 
